@@ -1,53 +1,28 @@
-import { useState } from 'react'
+import './component/todo/todo.css'
+import TodoData from './component/todo/TodoData'
+import TodoNew from './component/todo/TodoNew'
 import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import MyComponent from './component/MyComponent'
-import { SecondComponent, ThirdComponent } from './component/SecondComponent'
-
 function App() {
-  const [count, setCount] = useState(0)
-
-  //Cách viết thông thường 
-  // function myFunction() {
-  //   console.log("My Function >>>>");
-
-  // }
-
-  //Cách viết arrown Function
-  const myFunction = () => {
-    console.log("My Function >>>");
+  const name = "Quang Linh";
+  const age = 26;
+  const data = {
+    address: "HaNoi",
+    country: "vietnam"
   }
-  myFunction();
-
-
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="container text-center">
+      <div className="text-danger">Todo List</div>
+      <TodoNew />
+      <TodoData
+        name={name}
+        age={age}
+        data={data}
+      />
+      <div className='todo-img'>
+        <img className='logo' src={reactLogo} />
       </div>
-      <h1>Vite + React</h1>
-      <MyComponent />
-      <SecondComponent />
-      <ThirdComponent />
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    </div>
   )
 }
 
