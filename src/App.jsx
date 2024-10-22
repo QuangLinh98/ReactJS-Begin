@@ -19,6 +19,15 @@ function App() {
   }
   myFunction();
 
+  //Đây là dạng component chữ cái đầu phải viết hoa đó là quy tắc của React
+  //component = html + css + js
+  //Trong thế giới của Javascript tất cả đều là function , để biến nó thành 1 component bắt buộc chúng ta cần return ra HTML
+  const MyComponent = () => {
+    return (
+      <div>Quang Linh</div>
+    )
+  }
+
   return (
     <>
       <div>
@@ -30,6 +39,7 @@ function App() {
         </a>
       </div>
       <h1>Vite + React</h1>
+      <MyComponent />
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
