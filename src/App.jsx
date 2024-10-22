@@ -6,6 +6,19 @@ import './App.css'
 function App() {
   const [count, setCount] = useState(0)
 
+  //Cách viết thông thường 
+  // function myFunction() {
+  //   console.log("My Function >>>>");
+
+  // }
+
+  //Cách viết arrown Function
+  const myFunction = () => {
+    console.log("My Function >>>");
+
+  }
+  myFunction();
+
   return (
     <>
       <div>
